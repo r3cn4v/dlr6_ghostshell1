@@ -22,7 +22,7 @@ $(document).ready(function() {
         
         // Load applicant details via AJAX
         $.ajax({
-            url: 'get_applicant_details',
+            url: 'dole_user_dash_board/get_applicant_details',
             type: 'POST',
             data: { application_no: applicationNo },
             success: function(response) {
