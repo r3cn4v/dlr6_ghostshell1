@@ -22,7 +22,7 @@ $(document).ready(function() {
         
         // Load applicant details via AJAX
         $.ajax({
-            url: 'dole_user_dash_board/get_applicant_details',
+            url: 'dole_user_dash_board/get_applicant_details.php',
             type: 'POST',
             data: { application_no: applicationNo },
             success: function(response) {
@@ -37,7 +37,7 @@ $(document).ready(function() {
     // Kill session on browser close
     $(window).on('beforeunload', function() {
         $.ajax({
-            url: '../killsession/kill_session', // PHP file to handle session destruction
+            url: '../killsession/kill_session.js', // PHP file to handle session destruction
             type: 'POST',
             async: false // request sent before the page unloads
         });
